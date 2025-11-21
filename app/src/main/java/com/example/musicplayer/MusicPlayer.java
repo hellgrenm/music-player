@@ -47,4 +47,21 @@ public class MusicPlayer {
     public boolean isPlaying() {
         return music != null && music.isPlaying();
     }
+
+
+    public int getCurrentPosition() {
+        return music != null ? music.getCurrentPosition() : 0;
+    }
+
+    public int getDuration() {
+        return music != null ? music.getDuration() : 0;
+    }
+
+    public void seekTo(int position) {
+        if (music != null) {
+            music.seekTo(position);
+        }
+    }
+
+
 }
